@@ -218,7 +218,8 @@
             </div>
             
         </header>
-        <table class="customers__table table">
+        <div class="table-responsive-lg">
+            <table class="customers__table table-hover">
             <tr class="table__head">
                 <th>Customer Name</th>
                 <th>Company</th>
@@ -294,13 +295,17 @@
                 <td><div class="customers__status _red">Inctive</div></td>
             </tr>
         </table>
+        </div>
+        
         <footer class="customers__footer footer">
             <div class="footer__info">Showing data 1 to 8 of  256K entries</div>
             <div class="footer__pagination">
                 <nav aria-label="...">
                     <ul class="pagination">
                       <li class="page-item disabled">
-                        <a class="page-link">Previous</a>
+                        <a class="page-link"><span class="material-symbols-outlined">
+                            chevron_left
+                            </span></a>
                       </li>
                       <li class="page-item"><a class="page-link" href="#">1</a></li>
                       <li class="page-item active" aria-current="page">
@@ -308,7 +313,9 @@
                       </li>
                       <li class="page-item"><a class="page-link" href="#">3</a></li>
                       <li class="page-item">
-                        <a class="page-link" href="#">Next</a>
+                        <a class="page-link" href="#"><span class="material-symbols-outlined">
+                            chevron_right
+                            </span></a>
                       </li>
                     </ul>
                   </nav>
