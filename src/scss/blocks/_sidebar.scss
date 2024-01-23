@@ -24,29 +24,56 @@
     }
   }
   .item {
-    @include flex-between;
+    display: flex;
+    align-items: center;
+    gap: 14px;
     transition: $transition;
     border-radius: 8px;
     padding: 11rem 15rem 11rem 11rem;
+    color: $sidebar-items;
     &:hover {
-        background: $color-blue;
-    }
-
-    ;
-    &_arrow {
+      background: $color-blue;
+      color: $color-white;
+      svg {
+        stroke: $color-white;
+      }
+      .material-symbols-outlined {
+        color: $color-white;
+      }
     }
 
     &__icon {
+      width: 24px;
+      height: 24px;
+      svg {
+        width: 24px;
+        height: 24px;
+        transition: $transition
+      }      
     }
 
     &__title {
+      @include text($ff, 14rem, inherit, 500, inherit);
+      letter-spacing: -0.14px;
+      margin-right: auto;
+    }
+    &__arrow {
+      width: 16px;
+      height: 16px;
+    }
+    .material-symbols-outlined {
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+      color: $sidebar-items;
+      transition: $transition;
     }
   }
-  .material-symbols-outlined {
-  }
-  .list {
-    &__item {
-    }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
   }
   .footer {
     margin-top: auto;
