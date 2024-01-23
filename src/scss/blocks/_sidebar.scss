@@ -6,10 +6,11 @@
   box-shadow: 0px 10px 60px 0px rgba(226, 236, 249, 0.50);
   .header {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     padding-bottom: 65rem;
     img {
       margin-right: 8rem;
+      max-width: 37px;
     }
 
     &__text {
@@ -93,8 +94,15 @@
         svg path {
           stroke: $color-white;
           fill: inherit;
-        }      
-        
+        }
+      }
+      &.active {
+        background: $color-blue;
+        color: $color-white;
+        svg path {
+          stroke: $color-white;
+          fill: inherit;
+        }
       }
       
     }
