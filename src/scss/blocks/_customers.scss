@@ -1,36 +1,91 @@
 .customers {
-    background: $main-bg;
-    padding-top: 41px;  
+  background: $main-bg;
+  padding-top: 41px;
 
-    &__top {
-        @include text($ff, 24rem, inherit, 500, $color-black);
-        padding-bottom: 51rem;       
+  &__top {
+    @include text($ff, 24rem, inherit, 500, $color-black);
+    padding-bottom: 51rem;
+  }
+
+  &__body {
+    max-width: 968px;
+    width: 100%;
+    background: $color-white;
+    filter: drop-shadow(0px 10px 60px rgba(226, 236, 249, 0.5));
+    border-radius: 20px;
+    padding: 30px 0 38px;
+  }
+
+  .header {
+    @include flex-between;
+    padding-bottom: 40rem;
+    padding: 0 53rem 40rem 38rem;
+
+    &__title {
+      @include text($ff, 22rem, inherit, 600, $color-black);
+      letter-spacing: -0.22px;
+      margin-bottom: 7rem;
     }
 
-    &__body {
-        max-width: 968px;
-        width: 100%;
+    &__desc {
+      @include text($ff, 14rem, inherit, 400, $accent);
+      letter-spacing: -0.14px;
     }
 
-    .header {
+    &__search {
+    }
+  }
 
-        &__info {
-        }
-    
-        &__title {
-        }
-    
-        &__desc {
-        }
-    
-        &__search {
-        }
+  &__table {
+    width: 100%;
+    text-align: left;
+    padding: 0 44rem 0 38rem;
+    overflow-x: hidden;
+    position: relative;        
+        &::after {
+            content: ' ';
+            display: inline-block;
+            height: 5px;
+            color: red;            
+            z-index: 2; 
+            width: 100px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        } 
+    th {
+      @include text($ff, 14rem, inherit, 500, $color-grey);
+      letter-spacing: -0.14px;
+      padding-bottom: 14px;
+      //   border-bottom: 1px solid $color-grey-light;
+      //   border-width: 200%;
     }
-
-    &__table {
+    td {
+      @include text($ff, 14rem, inherit, 500, $color-text);
+      letter-spacing: -0.14px;
+      padding: 24px 0;
+      border-bottom: 1px solid $color-grey-light;
     }
-    &_footer {
+  }
+  &__status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    padding: 4px 12px;
+    &._green {
+      border: 1px solid $status-text-green;
+      background: $status-bg-green;
+      color: $status-text-green;
     }
+    &._red {
+      border: 1px solid $status-text-red;
+      background: $status-bg-red;
+      color: $status-text-red;
+    }
+  }
+  &_footer {
+  }
 }
 
 .search-container {
