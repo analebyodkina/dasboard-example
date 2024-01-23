@@ -23,6 +23,11 @@
       letter-spacing: -0.1px;
     }
   }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
   .item {
     display: flex;
     align-items: center;
@@ -48,8 +53,8 @@
       svg {
         width: 24px;
         height: 24px;
-        transition: $transition
-      }      
+        transition: $transition;
+      }
     }
 
     &__title {
@@ -69,24 +74,26 @@
       transition: $transition;
     }
   }
-
-  &__list {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-  }
   .footer {
     margin-top: auto;
+    display: flex;
+    align-items: center;
+    gap: 12px;
     &__img {
+      max-width: 42px;
     }
 
     &__info {
     }
 
     &__title {
+      @include text($ff, 14rem, inherit, 500, $color-black);
+      letter-spacing: 0.14px;
     }
 
     &__text {
+      @include text($ff, 14rem, inherit, 500, $color-grey-dark);
+      letter-spacing: 0.12px;
     }
   }
 }

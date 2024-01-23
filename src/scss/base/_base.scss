@@ -15,3 +15,8 @@ body {
 	grid-template-columns: minmax(100px,300px) 1fr;
 	column-gap: 71px;
 }
+img {
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+}
