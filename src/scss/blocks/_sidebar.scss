@@ -40,8 +40,18 @@
     &:hover {
       background: $color-blue;
       color: $color-white;
-      svg {
-        stroke: $color-white;
+      svg path {
+        fill: $color-white;
+      }      
+      .material-symbols-outlined {
+        color: $color-white;
+      }
+    }
+    &.active {
+      background: $color-blue;
+      color: $color-white;
+      svg path{
+        fill: $color-white;
       }
       .material-symbols-outlined {
         color: $color-white;
@@ -73,6 +83,20 @@
       cursor: pointer;
       color: $sidebar-items;
       transition: $transition;
+    }
+  }
+  .item{
+    &:first-child, &:nth-child(3), &:nth-child(4) {
+      &:hover {
+        background: $color-blue;
+        color: $color-white;
+        svg path {
+          stroke: $color-white;
+          fill: inherit;
+        }      
+        
+      }
+      
     }
   }
   .footer {
