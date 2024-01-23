@@ -33,26 +33,54 @@
     }
 
     &__search {
+      .search__form {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        padding: 7px 8px;
+        border-radius: 10px;
+        background: $input-bg;
+        border: 2px solid transparent;
+        transition: $transition;
+        &:hover {
+          border: 2px solid $color-grey-dark;
+        }
+
+        input {
+          width: 100%;
+          background: transparent;
+          border: 0;
+          outline: 0;
+          @include text($ff, 12rem, inherit, 400, $color-grey-dark);
+          letter-spacing: -0.12px;
+          &::placeholder {
+            @include text($ff, 12rem, inherit, 400, $color-grey);
+            letter-spacing: -0.12px;
+          }
+        }
+      }
     }
   }
 
   &__table {
     width: 100%;
+    border-collapse: separate;
     text-align: left;
     padding: 0 44rem 0 38rem;
     overflow-x: hidden;
-    position: relative;        
-        &::after {
-            content: ' ';
-            display: inline-block;
-            height: 5px;
-            color: red;            
-            z-index: 2; 
-            width: 100px;
-            position: absolute;
-            top: 0;
-            left: 0;
-        } 
+    position: relative;
+    &::after {
+      content: " ";
+      display: inline-block;
+      height: 5px;
+      color: red;
+      z-index: 2;
+      width: 100px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
     th {
       @include text($ff, 14rem, inherit, 500, $color-grey);
       letter-spacing: -0.14px;
@@ -84,11 +112,26 @@
       color: $status-text-red;
     }
   }
-  &_footer {
-  }
-}
+  .footer {
+    padding: 32rem 40rem 41rem 38rem;
+    @include flex-between;
 
-.search-container {
-}
-.search {
+    &__info {
+      @include text($ff, 14rem, inherit, 500, $color-grey);
+      letter-spacing: -0.14px;
+      
+    }
+    &__pagination {
+    }
+    // .pagination {
+    // }
+    // .page-item {
+    // }
+    // .disabled {
+    // }
+    // .page-link {
+    // }
+    // .active {
+    // }
+  }
 }

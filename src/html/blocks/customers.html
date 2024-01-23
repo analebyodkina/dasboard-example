@@ -1,16 +1,18 @@
 <div class="customers">
-    <div class="customers__top">Hello Evano 👋🏼,</div>
+    <div class="customers__top">Hello <span class="customers__name">Evano</span> 👋🏼,</div>
     <section class="customers__body">
         <header class="customers__header header">
             <div class="header__info">
                 <div class="header__title">All Customers</div>
                 <div class="header__desc">Active Members</div>
             </div>            
-            <div class="header__search search-container">
-                <form>
-                    <input type="text" name="search field" placeholder="Search...">
+            <div class="header__search search">
+                <form class="search__form">
                     <button type="submit" class="search">
-                        <img src="/img/search-icon.svg" alt="search icon">                    
+                        <img src="/img/search-icon.svg" alt="search icon"> 
+                    </button> 
+                    <input type="text" name="search field" placeholder="Search...">
+                                     
                 </form>                        
             </div>
             
@@ -91,7 +93,27 @@
                 <td><div class="customers__status _red">Inctive</div></td>
             </tr>
         </table>
-        <footer class="customers_footer"></footer>
+        <footer class="customers__footer footer">
+            <div class="footer__info">Showing data 1 to 8 of  256K entries</div>
+            <div class="footer__pagination">
+                <nav aria-label="...">
+                    <ul class="pagination">
+                      <li class="page-item disabled">
+                        <a class="page-link">Previous</a>
+                      </li>
+                      <li class="page-item"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item active" aria-current="page">
+                        <a class="page-link" href="#">2</a>
+                      </li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                      </li>
+                    </ul>
+                  </nav>
+            </div>
+
+        </footer>
 
     </div>
 </div>
