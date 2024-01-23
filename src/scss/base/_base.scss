@@ -1,0 +1,17 @@
+html {
+	scroll-behavior: smooth;
+	font-size: 1px;
+}
+body {
+	background-color: $color-white;
+	color: $color-text;
+    font-family: $ff;
+}
+.container {
+	max-width: 1460px;
+	padding: 0 15px;
+	margin-inline: auto;
+	display: grid;
+	grid-template-columns: minmax(100px,300px) 1fr;
+	column-gap: 71px;
+}
