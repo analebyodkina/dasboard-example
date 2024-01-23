@@ -13,9 +13,12 @@
 	</head>
 	<body>
 		<div class="wrapper">
-			<div class="container"></div>
+			<div class="container">
+				@@include('blocks/sidebar.html')
+				@@include('blocks/customers.html')
+			</div>
 		</div>
-		@@include('blocks/sidebar.html')		
+				
 		<script src="./js/index.bundle.js"></script>
 	</body>
 </html>

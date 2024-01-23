@@ -1,0 +1,65 @@
+.sidebar {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 36rem 28rem 76rem;
+  .header {
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 65rem;
+    img {
+      margin-right: 8rem;
+    }
+
+    &__text {
+      @include text($ff, 26rem, inherit, 600, $color-black);
+      letter-spacing: 0.26px;
+      margin-right: 4rem;
+    }
+
+    &__version {
+      @include text($ff, 10rem, inherit, 500, $color-version);
+      color: #838383;
+      letter-spacing: -0.1px;
+    }
+  }
+  .item {
+    @include flex-between;
+    transition: $transition;
+    border-radius: 8px;
+    padding: 11rem 15rem 11rem 11rem;
+    &:hover {
+        background: $color-blue;
+    }
+
+    ;
+    &_arrow {
+    }
+
+    &__icon {
+    }
+
+    &__title {
+    }
+  }
+  .material-symbols-outlined {
+  }
+  .list {
+    &__item {
+    }
+  }
+  .footer {
+    margin-top: auto;
+    &__img {
+    }
+
+    &__info {
+    }
+
+    &__title {
+    }
+
+    &__text {
+    }
+  }
+}
