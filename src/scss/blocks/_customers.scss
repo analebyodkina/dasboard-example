@@ -1,0 +1,39 @@
+.customers {
+    background: $main-bg;
+    padding-top: 41px;  
+
+    &__top {
+        @include text($ff, 24rem, inherit, 500, $color-black);
+        padding-bottom: 51rem;       
+    }
+
+    &__body {
+        max-width: 968px;
+        width: 100%;
+    }
+
+    .header {
+
+        &__info {
+        }
+    
+        &__title {
+        }
+    
+        &__desc {
+        }
+    
+        &__search {
+        }
+    }
+
+    &__table {
+    }
+    &_footer {
+    }
+}
+
+.search-container {
+}
+.search {
+}
