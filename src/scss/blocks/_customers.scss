@@ -1,6 +1,6 @@
 .customers {
   background: $main-bg;
-  padding-top: 41px;
+  padding-top: 45px;
 
   &__top {
     @include text($ff, 24rem, inherit, 500, $color-black);
@@ -33,12 +33,14 @@
     }
 
     &__search {
+      max-width: 216px;
+      width: 100%;
       .search__form {
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 8px;
-        padding: 7px 8px;
+        padding: 9px 6px 7px 6px;
         border-radius: 10px;
         background: $input-bg;
         border: 2px solid transparent;
@@ -58,6 +60,10 @@
             @include text($ff, 12rem, inherit, 400, $color-grey);
             letter-spacing: -0.12px;
           }
+        }
+        button img {
+          min-width: 20px;
+          margin-right: 5px;
         }
       }
     }
@@ -85,7 +91,7 @@
       &:not(:last-of-type) {
         padding-right: 10px;
       }
-      @include text($ff, 14rem, inherit, 500, $color-grey);
+      @include text($ff, 14rem, 1.1, 500, $color-grey);
       letter-spacing: -0.14px;
       padding-bottom: 14px;
     }
@@ -93,9 +99,12 @@
       &:not(:last-of-type) {
         padding-right: 10px;
       }
+      &:not(:first-of-type) {
+        padding-left: 30px;
+      }
       @include text($ff, 14rem, inherit, 500, $color-text);
       letter-spacing: -0.14px;
-      padding: 24px 0;
+      padding: 18px 0;
       border-bottom: 1px solid $color-grey-light;
     }
   }
