@@ -73,7 +73,7 @@
     width: 100%;
     border-collapse: separate;
     text-align: left;
-    padding: 0 44rem 0 38rem;
+    padding: 0 36rem;
     overflow-x: scroll;
     position: relative;
     &::after {
@@ -88,23 +88,27 @@
       left: 0;
     }
     th {
-      &:not(:last-of-type) {
-        padding-right: 10px;
+      &:first-of-type {
+        width: 19.5%;
+        padding-right: 40px;
       }
-      @include text($ff, 14rem, 1.1, 500, $color-grey);
+
+      @include text($ff, 14rem, 15rem, 500, $color-grey);
       letter-spacing: -0.14px;
       padding-bottom: 14px;
     }
     td {
-      &:not(:last-of-type) {
-        padding-right: 10px;
+      &:first-of-type {
+        width: 19.5%;
+        padding-right: 40px;
       }
-      &:not(:first-of-type) {
-        padding-left: 30px;
+      &:last-of-type {
+        text-align: center;
       }
-      @include text($ff, 14rem, inherit, 500, $color-text);
+
+      @include text($ff, 14rem, 20rem, 500, $color-text);
       letter-spacing: -0.14px;
-      padding: 18px 0;
+      padding: 20px 0 18px 0;
       border-bottom: 1px solid $color-grey-light;
     }
   }
@@ -113,7 +117,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 4px;
-    padding: 4px 12px;
+    padding: 4px;
     &._green {
       border: 1px solid $status-text-green;
       background: $status-bg-green;
@@ -126,18 +130,21 @@
     }
   }
   .footer {
-    padding: 32rem 40rem 41rem 38rem;
+    padding: 17rem 40rem 41rem 39rem;
     @include flex-between;
 
     &__info {
       @include text($ff, 14rem, inherit, 500, $color-grey);
+      letter-spacing: 1.1;
       letter-spacing: -0.14px;
     }
     &__pagination {
       .pagination {
         gap: 12px;
       }
-
+      li {
+        @include text($ff, 12rem, 100%, 500, $pagin-text);
+      }
       .page-item {
         cursor: pointer;
         display: flex;
@@ -168,6 +175,7 @@
           border: none;
           background: transparent;
         }
+        
       }
       .material-symbols-outlined {
         font-size: 12px;
