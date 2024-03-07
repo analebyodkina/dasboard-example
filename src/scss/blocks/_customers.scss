@@ -82,11 +82,17 @@
       left: 0;
     }
     th {
+      &:not(:last-of-type) {
+        padding-right: 10px;
+      }
       @include text($ff, 14rem, inherit, 500, $color-grey);
       letter-spacing: -0.14px;
       padding-bottom: 14px;
     }
     td {
+      &:not(:last-of-type) {
+        padding-right: 10px;
+      }
       @include text($ff, 14rem, inherit, 500, $color-text);
       letter-spacing: -0.14px;
       padding: 24px 0;
@@ -140,9 +146,9 @@
           color: $color-white;
           background: $color-blue;
         }
-        &:not(.disabled):hover {          
+        &:not(.disabled):hover {
           background: $color-blue;
-          a{
+          a {
             color: $color-white;
           }
         }
@@ -158,6 +164,6 @@
         font-size: 12px;
         color: $pagin-text;
       }
-    }    
+    }
   }
 }
