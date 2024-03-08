@@ -8,12 +8,12 @@ body {
     font-family: $ff;
 }
 .container {
-	max-width: 1460px;
+	max-width: 1470px;
 	padding: 0 15px;
 	margin-inline: auto;
 	display: grid;
 	grid-template-columns: minmax(160px,306px) 1fr;
-	column-gap: 71px;
+	column-gap: 70px;
 }
 img {
 	width: 100%;
