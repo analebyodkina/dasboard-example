@@ -91,6 +91,7 @@
       &:first-of-type {
         width: 19.5%;
         padding-right: 40px;
+        padding-left: 0;
       }
 
       @include text($ff, 14rem, 15rem, 500, $color-grey);
@@ -101,6 +102,7 @@
       &:first-of-type {
         width: 19.5%;
         padding-right: 40px;
+        padding-left: 0;
       }
       &:last-of-type {
         text-align: center;
@@ -130,20 +132,21 @@
     }
   }
   .footer {
-    padding: 17rem 40rem 41rem 39rem;
+    padding: 20rem 40rem 41rem 40rem;
     @include flex-between;
 
     &__info {
       @include text($ff, 14rem, inherit, 500, $color-grey);
-      letter-spacing: 1.1;
       letter-spacing: -0.14px;
     }
     &__pagination {
       .pagination {
-        gap: 12px;
+        gap: 10px;
       }
       li {
         @include text($ff, 12rem, 100%, 500, $pagin-text);
+        display: flex;
+        align-items: flex-end;
       }
       .page-item {
         cursor: pointer;
@@ -175,7 +178,9 @@
           border: none;
           background: transparent;
         }
-        
+        &:first-of-type, &:last-of-type {
+          padding: 6px;
+        }
       }
       .material-symbols-outlined {
         font-size: 12px;
