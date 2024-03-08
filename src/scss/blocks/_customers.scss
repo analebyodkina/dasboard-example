@@ -1,6 +1,7 @@
 .customers {
   background: $main-bg;
   padding-top: 45px;
+  width: 100%;
 
   &__top {
     @include text($ff, 24rem, inherit, 500, $color-black);
@@ -13,13 +14,13 @@
     background: $color-white;
     filter: drop-shadow(0px 10px 60px rgba(226, 236, 249, 0.5));
     border-radius: 20px;
-    padding: 30px 0 38px;
+    padding: 30px 36rem 38rem;
   }
 
   .header {
     @include flex-between;
-    padding-bottom: 40rem;
-    padding: 0 53rem 40rem 38rem;
+    padding-bottom: 48rem;
+    padding: 0 15rem 40rem 0;
 
     &__title {
       @include text($ff, 22rem, inherit, 600, $color-black);
@@ -71,9 +72,9 @@
 
   &__table {
     width: 100%;
-    border-collapse: separate;
-    text-align: left;
-    padding: 0 36rem;
+    border-collapse: collapse;
+    border-spacing: 0;
+    text-align: left;    
     overflow-x: scroll;
     position: relative;
     &::after {
@@ -93,6 +94,9 @@
         padding-right: 40px;
         padding-left: 0;
       }
+      &:not(:last-of-type) {
+        padding-right: 10px;
+      }
 
       @include text($ff, 14rem, 15rem, 500, $color-grey);
       letter-spacing: -0.14px;
@@ -104,8 +108,8 @@
         padding-right: 40px;
         padding-left: 0;
       }
-      &:last-of-type {
-        text-align: center;
+      &:not(:last-of-type) {
+        padding-right: 10px;
       }
 
       @include text($ff, 14rem, 20rem, 500, $color-text);
@@ -132,7 +136,7 @@
     }
   }
   .footer {
-    padding: 20rem 40rem 41rem 40rem;
+    padding: 35rem 0rem 41rem 0rem;
     @include flex-between;
 
     &__info {
