@@ -13,11 +13,10 @@ body {
 }
 .main-container {
   overflow-x: hidden;
-  max-width: 1470px;
-  padding: 0 15px;
+  max-width: 1440px;  
   margin-inline: auto;
   display: flex;
-  gap: clamp(15px, 10vw, 50px);
+  gap: 15rem;
   @media screen and (min-width:1200px) {
 	gap: 70px;
   }
