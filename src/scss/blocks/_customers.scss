@@ -18,23 +18,33 @@
 
   .header {
     @include flex-between;
+    gap: 20rem;
     padding-bottom: 48rem;
     padding: 0 15rem 40rem 0;
 
     &__title {
-      @include text($ff, 22rem, inherit, 600, $color-black);
+      @include text($ff, 14rem, inherit, 600, $color-black);
       letter-spacing: -0.22px;
       margin-bottom: 7rem;
+      @media screen and (min-width: 1200px) {
+        font-size: 22px;
+      }
     }
 
     &__desc {
-      @include text($ff, 14rem, inherit, 400, $accent);
+      @include text($ff, 11rem, inherit, 400, $accent);
       letter-spacing: -0.14px;
+      @media screen and (min-width: 1200px) {
+        font-size: 14px;
+      }
     }
 
     &__search {
-      max-width: 216px;
-      width: 100%;
+      @media screen and (min-width: 1200px) {
+        max-width: 216px;
+        width: 100%;
+      }
+
       .search__form {
         display: flex;
         align-items: center;
@@ -97,9 +107,13 @@
         padding-right: 10px;
       }
 
-      @include text($ff, 14rem, 15rem, 500, $color-grey);
+      @include text($ff, 11rem, 12rem, 500, $color-grey);
       letter-spacing: -0.14px;
       padding-bottom: 14px;
+      @media screen and (min-width: 992px) {
+        font-size: 14px;
+        line-height: 15rem;
+      }
     }
     td {
       &:first-of-type {
@@ -111,10 +125,14 @@
         padding-right: 10px;
       }
 
-      @include text($ff, 14rem, 20rem, 500, $color-text);
+      @include text($ff, 11rem, 12rem, 500, $color-text);
       letter-spacing: -0.14px;
       padding: 20px 0 18px 0;
       border-bottom: 1px solid $color-grey-light;
+      @media screen and (min-width: 992px) {
+        font-size: 14px;
+        line-height: 20rem;
+      }
     }
   }
   &__status {
@@ -136,11 +154,20 @@
   }
   .footer {
     padding: 35rem 0rem 41rem 0rem;
-    @include flex-between;
+    @include flex-between;    
+    gap: 20rem;
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
 
     &__info {
-      @include text($ff, 14rem, inherit, 500, $color-grey);
+      @include text($ff, 12rem, inherit, 500, $color-grey);
       letter-spacing: -0.14px;
+      @media screen and (min-width: 1200px) {
+        font-size: 14px;
+      }
+      
     }
     &__pagination {
       .pagination {
@@ -167,6 +194,7 @@
         &.active {
           color: $color-white;
           background: $color-blue;
+          
         }
         &:not(.disabled):hover {
           background: $color-blue;
