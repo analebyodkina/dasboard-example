@@ -27,3 +27,7 @@ img {
   height: auto;
   object-fit: cover;
 }
+.dashboard__top {
+  @include text($ff, 24rem, inherit, 500, $color-black);
+  padding: 41rem 0 51rem;
+}

@@ -1,6 +1,5 @@
 .customers {
   background: $main-bg;
-  padding-top: 45px;
   width: 100%;
 
   &__top {
@@ -14,7 +13,7 @@
     background: $color-white;
     filter: drop-shadow(0px 10px 60px rgba(226, 236, 249, 0.5));
     border-radius: 20px;
-    padding: 30px 36rem 38rem;
+    padding: 35px 36rem 38rem;
   }
 
   .header {
@@ -74,7 +73,7 @@
     width: 100%;
     border-collapse: collapse;
     border-spacing: 0;
-    text-align: left;    
+    text-align: left;
     overflow-x: scroll;
     position: relative;
     &::after {
@@ -182,7 +181,8 @@
           border: none;
           background: transparent;
         }
-        &:first-of-type, &:last-of-type {
+        &:first-of-type,
+        &:last-of-type {
           padding: 6px;
         }
       }

@@ -27,7 +27,13 @@
   <body>
     <div class="wrapper">
       <div class="main-container">
-        @@include('blocks/sidebar.html') @@include('blocks/customers.html')
+        @@include('blocks/sidebar.html')
+        <div style="max-width: 968px; width: 100%;">
+          <div class="dashboard__top">
+            Hello <span class="customers__name">Evano</span>👋🏼,
+          </div>
+          @@include('blocks/customers.html')
+        </div>
       </div>
     </div>
     <script
