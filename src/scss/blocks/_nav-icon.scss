@@ -19,9 +19,13 @@
 	height: calc(var(--line-height) * 3 + var(--spacing) * 2);
 	width: var(--width);
 
-	display: flex;
+	
+	display: none;
+	@include tablet-small-768 {
+		display: flex;
 	justify-content: center;
 	align-items: center;
+	}
 }
 
 .nav-icon {

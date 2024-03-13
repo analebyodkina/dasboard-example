@@ -32,4 +32,9 @@ img {
   @media screen and (min-width:1200px) {
     font-size: 24px;
     }
+    @include tablet-small-768 {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
 }
