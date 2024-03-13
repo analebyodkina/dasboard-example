@@ -26,8 +26,14 @@ img {
   height: auto;
   object-fit: cover;
 }
+.main-info {
+  max-width: 968px;
+  width: 100%;
+
+}
+
 .dashboard__top {
-  @include text($ff, 14rem, inherit, 500, $color-black);
+  @include text($ff, 18rem, inherit, 500, $color-black);
   padding: 41rem 0 51rem;
   @media screen and (min-width:1200px) {
     font-size: 24px;

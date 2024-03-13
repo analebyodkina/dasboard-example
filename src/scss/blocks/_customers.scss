@@ -14,6 +14,9 @@
     filter: drop-shadow(0px 10px 60px rgba(226, 236, 249, 0.5));
     border-radius: 20px;
     padding: 30rem 36rem 38rem;
+    @include tablet-small-768 {
+      padding: 30rem 15rem 38rem;
+    }
   }
 
   .header {
@@ -21,6 +24,10 @@
     gap: 20rem;
     padding-bottom: 48rem;
     padding: 0 15rem 40rem 0;
+    @include tablet-small-768 {
+      padding: 0 0 40rem 0;
+    }
+    
 
     &__title {
       @include text($ff, 14rem, inherit, 600, $color-black);
@@ -99,8 +106,7 @@
     }
     th {
       &:first-of-type {
-        width: 19.5%;
-        padding-right: 40px;
+        width: 19.5%;        
         padding-left: 0;
       }
       &:not(:last-of-type) {
@@ -117,8 +123,7 @@
     }
     td {
       &:first-of-type {
-        width: 19.5%;
-        padding-right: 40px;
+        width: 19.5%;        
         padding-left: 0;
       }
       &:not(:last-of-type) {
@@ -140,7 +145,8 @@
     align-items: center;
     justify-content: center;
     border-radius: 4px;
-    padding: 4px;
+    padding: 4px 12px;
+    
     &._green {
       border: 1px solid $status-text-green;
       background: $status-bg-green;

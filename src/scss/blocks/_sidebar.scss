@@ -13,6 +13,9 @@
     display: flex;
     align-items: center;
     padding-bottom: 53rem;
+    @include tablet-small-768 {
+      padding: 0 0 23rem 40rem;
+    }
 
     img {
       margin-right: 8rem;
@@ -28,9 +31,7 @@
       @media screen and (min-width: 1200px) {
         font-size: 26rem;
       }
-      @media screen and (max-width: 768px) {
-        font-size: 12px;
-      }
+      
     }
     &__version {
       @include text($ff, 10rem, inherit, 500, $color-version);
